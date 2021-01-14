@@ -14,6 +14,7 @@ frontend {
 }
 
 val addPackage = tasks.register<Exec>("addPackage") {
+    outputs.upToDateWhen { false }
     workingDir = projectDir
     commandLine("yarn", "remove", "shared-types")
     commandLine("yarn", "add", "file:../shared/build/libs/shared-types/")

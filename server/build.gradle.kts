@@ -11,6 +11,7 @@ group = "de.mari"
 version = "0.0.1"
 
 application {
+    @Suppress("DEPRECATION")
     mainClassName = "io.ktor.server.netty.EngineMain"
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=true")
 }
@@ -78,6 +79,7 @@ tasks.processResources {
 }
 
 val addTypes = tasks.register<Copy>("addTypes") {
+    outputs.upToDateWhen { false }
     delete("$projectDir/src/types/")
     from("../shared/build/libs/kt-jvm/")
     include("**/*.kt")
