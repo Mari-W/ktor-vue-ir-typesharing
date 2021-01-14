@@ -7352,9 +7352,6 @@ sha.js@^2.4.0, sha.js@^2.4.8:
 "shared-types@file:../shared/build/libs/shared-types":
   version "4.2.0"
 
-"shared-types@file:../shared/build/libs/shared-types/":
-  version "4.2.0"
-
 shebang-command@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/shebang-command/-/shebang-command-1.2.0.tgz#44aac65b695b03398968c39f363fee5deafdf1ea"

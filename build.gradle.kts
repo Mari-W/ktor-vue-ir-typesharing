@@ -1,6 +1,6 @@
-val setup = tasks.register("setup")
+val bundle = tasks.register("bundle")
 tasks {
-    "setup" {
+    "bundle" {
         dependsOn(":shared:build")
         finalizedBy(":client:build", ":server:build")
     }

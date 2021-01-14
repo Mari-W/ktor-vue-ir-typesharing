@@ -62,7 +62,7 @@ tasks.processResources {
                 expand(
                     "KTOR_ENV" to "dev",
                     "KTOR_PORT" to "8081",
-                    "KTOR_MODULE" to "build",
+                    "KTOR_MODULE" to "server",
                     "KTOR_AUTORELOAD" to "true"
                 )
             }
