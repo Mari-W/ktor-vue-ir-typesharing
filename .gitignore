@@ -1,0 +1,15 @@
+/shared/build/
+/server/build/
+/server/resources/dist/
+
+
+/client/npm-debug.log*
+/client/yarn-debug.log*
+/client/yarn-error.log*
+/client/pnpm-debug.log*
+
+/client/node_modules/
+/client/dist/
+/build/
+/.idea/
+/.gradle/
