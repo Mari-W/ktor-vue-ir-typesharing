@@ -10,9 +10,11 @@ import io.ktor.routing.*
 import models.User
 import social.socials.Reddit
 import social.socials.Twitter
+import kotlin.js.ExperimentalJsExport
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
+@ExperimentalJsExport
 @Suppress("unused") // Referenced in application.conf
 fun Application.module() {
 
