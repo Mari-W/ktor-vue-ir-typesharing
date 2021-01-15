@@ -3,7 +3,7 @@
 ### Description
 This is an example project for using the new IR compiler of kotlin. Defined classes
 from the <b>shared</b> directory are distributed to the server and client at the same time using the IR compiler for the client (to create TypeScript Definition files)
-and manipulating the source files directly for the server (without compilation).
+and normal JVM compilation for server side..
 
 ### Prerequisites
 Following tools should be installed on your machine (only tested on Ubuntu):
