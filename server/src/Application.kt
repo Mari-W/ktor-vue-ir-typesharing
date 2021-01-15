@@ -1,8 +1,5 @@
 package de.mari
 
-import de.mari.types.models.User
-import de.mari.types.social.socials.Reddit
-import de.mari.types.social.socials.Twitter
 import io.ktor.application.*
 import io.ktor.features.*
 import io.ktor.http.*
@@ -10,7 +7,9 @@ import io.ktor.http.content.*
 import io.ktor.jackson.*
 import io.ktor.response.*
 import io.ktor.routing.*
-
+import models.User
+import social.socials.Reddit
+import social.socials.Twitter
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
@@ -83,7 +82,7 @@ fun Application.module() {
                 call.respond("Example API 0.0.1")
             }
             get("/user") {
-                call.respond(User("Marius", "Weidner", 19))
+                call.respond(User("Marius", "Weidner", 19, 10f))
             }
             get("/socials") {
                 call.respond(listOf(Twitter("mariusweidner"), Reddit("Mari-W")))

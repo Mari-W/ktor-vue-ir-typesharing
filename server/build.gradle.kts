@@ -23,6 +23,7 @@ repositories {
 }
 
 dependencies {
+    implementation(project(":shared"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
     implementation("io.ktor:ktor-server-netty:$ktorVersion")
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
@@ -62,7 +63,7 @@ tasks.processResources {
                 expand(
                     "KTOR_ENV" to "dev",
                     "KTOR_PORT" to "8081",
-                    "KTOR_MODULE" to "server",
+                    "KTOR_MODULE" to "build",
                     "KTOR_AUTORELOAD" to "true"
                 )
             }
@@ -78,19 +79,20 @@ tasks.processResources {
     }
 }
 
-val addTypes = tasks.register<Copy>("addTypes") {
-    outputs.upToDateWhen { false }
-    delete("$projectDir/src/types/")
-    from("../shared/build/libs/kt-jvm/")
-    include("**/*.kt")
-    into("$projectDir/src/types/")
-}
+//val addTypes = tasks.register<Copy>("addTypes") {
+//    outputs.upToDateWhen { false }
+//    delete("$projectDir/src/types/")
+//    from("../shared/build/libs/kt-jvm/")
+//    include("**/*.kt")
+//    into("$projectDir/src/types/")
+//}
 
 tasks {
     "run" {
         dependsOn(setDev)
     }
     "build" {
+        dependsOn(":shared:build")
         dependsOn(":client:build")
         dependsOn(fatJar)
         doLast {
