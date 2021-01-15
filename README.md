@@ -21,7 +21,7 @@ You will actually need 4 terminals to archive hot reloading while coding, all th
 
 - In <b>shared</b> directory run : `gradle -t build`
 - In <b>server</b> directory run: `gradle -t installDist`
-- In <b>server</b> directory run: `gradle run`
+- In <b>server</b> directory run: `gradle -t run`
 - in <b>client</b> directory run: `yarn serve`
 
 ### Production
