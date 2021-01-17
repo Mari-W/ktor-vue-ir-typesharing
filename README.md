@@ -26,5 +26,6 @@ You will actually need 4 terminals to archive hot reloading while coding, all th
 ### Production
 To built fat-JAR-file will include everything to just copy the file to some server and run it.
 -  In <b>root</b> directory run `gradle bundle` or `./gradlew bundle`.
+
 To execute the jar file run `java -jar build/server-0.0.1.jar`. This will try running on Port 80 (as it's production),
   if you want to test locally run `java -jar build/server-0.0.1.jar -port=SOME_PORT`. 
