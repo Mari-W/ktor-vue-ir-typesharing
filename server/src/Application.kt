@@ -84,7 +84,7 @@ fun Application.module() {
                 call.respond("Example API 0.0.1")
             }
             get("/user") {
-                call.respond(User("Marius", "Weidner", 19, 10f))
+                call.respond(User("Marius", "Weidner", 19))
             }
             get("/socials") {
                 call.respond(listOf(Twitter("mariusweidner"), Reddit("Mari-W")))

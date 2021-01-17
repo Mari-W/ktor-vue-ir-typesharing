@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p v-if="this.user !== null">
-      This example was created by <b>{{ this.user.first }} {{ user.last }}</b> by the age of
+      This example was created by <b>{{ this.user.first }} {{ this.user.last }}</b> by the age of
       <b>{{ this.user.age }}</b>.
     </p>
     <h3>Socials</h3>
